@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Navbar = () => {
   return (
-    <div>Let's DO IT</div>
-  )
-}
+    <section className="py-24">
+      <div className="container">
+      Let&apos;s DO IT NOWff
+      </div>
+    </section>
+  );
+};
 
-export default Navbar
+export default Navbar;
