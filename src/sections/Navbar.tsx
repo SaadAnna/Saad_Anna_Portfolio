@@ -6,29 +6,30 @@ export const Navbar = () => {
         <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl lg:max-w-3xl mx-auto relative">
           <div className="absolute inset-0 backdrop-blur -z-10 hidden md:block"></div>
           <div>
-            <div className=" w-10 rounded-lg inline-flex justify-center items-center text-xl border-white/15">
-              Saad
+            <div className="border h-10 w-10 rounded-lg inline-flex justify-center items-center border-white/15">
+              SaaS
             </div>
           </div>
           <div className="hidden md:block" id="navabar">
             <nav className="flex gap-8 text-sm">
               <a href="#" className="text-white/70 hover:text-white transition">
-                Home
+                Features
               </a>
               <a href="#" className="text-white/70 hover:text-white transition">
-                Work
+                Developers
               </a>
               <a href="#" className="text-white/70 hover:text-white transition">
-                About
+                Pricing
+              </a>
+              <a href="#" className="text-white/70 hover:text-white transition">
+                ChnageLog
               </a>
             </nav>
           </div>
           <div className="flex gap-4 items-center">
-            <button className="text-black text-sm sm:hidden lg:block text-medium bg-white border-none p-3 rounded-full">
-              Contact Me
-            </button>
+            <button>Join Waitlist</button>
             <svg
-              className="w-8 h-8 lg:hidden sm:block text-white dark:text-white"
+              className="w-8 h-8 md:hidden text-white dark:text-white"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
