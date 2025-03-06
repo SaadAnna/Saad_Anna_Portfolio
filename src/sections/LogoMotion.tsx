@@ -12,7 +12,7 @@ import jslogo from "@/assets/jslogo.png";
 import { motion } from "framer-motion";
 export const LogoMotion = () => {
   return (
-    <section className="py-24">
+    <section className="py-20">
       <div className="container">
           <div className="flex mx-auto flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
             <motion.div
