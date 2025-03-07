@@ -3,6 +3,7 @@ import { Hero } from "@/sections/Hero";
 import { LogoMotion } from "@/sections/LogoMotion";
 import { Services } from "@/sections/Services";
 import { About } from "@/sections/About";
+import { Work } from "@/sections/Work";
 export default function Home() {
   return (
     <>
@@ -11,6 +12,7 @@ export default function Home() {
     <LogoMotion />
     <Services />
     <About />
+    <Work />
     </>
       
   );
