@@ -38,8 +38,8 @@ export const About = () => {
     const specialSpans = container.querySelectorAll(".always-white");
     specialSpans.forEach((span) => {
       span.classList.add(
-        "text-white",
-        "font-semibold",
+        "text-neutral-600",
+        "font-medium",
         "lg:text-4xl",
         "md:text-2xl",
         "sm:text-2xl"
@@ -50,9 +50,9 @@ export const About = () => {
     const normalSpans = container.querySelectorAll(".animate-span");
     normalSpans.forEach((span) => {
       span.classList.add(
-        "text-neutral-700",
+        "text-neutral-500",
         "transition-colors",
-        "duration-1000",
+        "duration-500",
         "ease-in-out"
       );
       observer.observe(span);
@@ -64,7 +64,7 @@ export const About = () => {
   return (
     <section className="py-20">
       <div className="container">
-        <div className="flex flex-col gap-32 mx-auto">
+        <div className="flex flex-col gap-10 mx-auto">
           <div className="text-4xl md:text-[45px] mx-auto md:leading-none max-w-2xl font-semibold tracking-tight bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center">
             The Human Behind the Screen
           </div>
@@ -73,9 +73,7 @@ export const About = () => {
             ref={textRef}
             className="lg:text-3xl md:text-2xl sm:text-xl max-w-5xl font-normal mx-auto text-center"
           >
-            <span className="text-5xl md:text-[30px] md:leading-none font-semibold tracking-tight bg-black bg-[radial-gradient(100%_100%_at_top_right,black,#833fff,#240066)] text-transparent bg-clip-text text-center">
-              Hello, I&apos;m Saad
-            </span>{" "}
+            <span className="always-white">Hello, I&apos;m Saad</span>{" "}
             <span className="animate-span">
               a passionate front-end developer with 2 years of experience
               turning ideas into interactive, pixel-perfect realities.
@@ -94,7 +92,7 @@ export const About = () => {
               about creating digital solutions that not only look great but work
               flawlessly.
             </span>{" "}
-            <span className="text-5xl md:text-[30px] md:leading-none font-semibold tracking-tight bg-black bg-[radial-gradient(100%_100%_at_top_right,black,#833fff,#240066)] text-transparent bg-clip-text text-center">
+            <span className="always-white">
               Let&apos;s build something amazing together!
             </span>
           </div>
