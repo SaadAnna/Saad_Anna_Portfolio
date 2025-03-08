@@ -9,22 +9,22 @@ export const Work = () => {
       id: 1,
       image: FirstProject,
       title: "Ai Seo Genarator Landing Page",
-      description: "saad anna is the best",
-      languages: "HTML / CSS / Javascript",
+      description: "",
+      languages: "Next.Js / Tailwind CSS / React.Js / Framer Motion",
     },
     {
       id: 2,
       image: SeconProject,
-      title: "saad",
-      description: "saad anna is the best",
-      languages: "HTML / CSS / Javascript",
+      title: "E-commerce Landing Page",
+      description: "",
+      languages: "React.Js / Tailwind CSS / Vite",
     },
     {
       id: 2,
       image: ThirdProject,
-      title: "saad",
+      title: "Codew | Front-End Development Startup",
       description: "",
-      languages: "HTML / CSS / Javascript",
+      languages: "React.JS / Javascript / Email.Js / Tailwind CSS",
     },
   ];
   return (
@@ -38,19 +38,31 @@ export const Work = () => {
             {Works.map((work) => (
               <div
                 key={work.id}
-                className="flex flex-col relative  text-start justify-start gap-3 p-2.5 border border-white/20 rounded-xl w-[300px] h-[400px] cursor-pointer"
+                className="flex flex-col relative duration-200 ease-out hover:bg-neutral-950 text-start justify-start gap-2 p-2.5 border border-white/20 rounded-xl w-[300px] h-[300px] cursor-pointer"
               >
-                <a href="">
-                <Image className="w-auto h-48 object-cover border border-white/20 rounded-xl" src={work.image} alt="first project image"></Image>
-                </a>
-                <div className="text-white tracking-tighter font-semibold text-lg">
+                <Image
+                  className="w-auto h-auto object-cover rounded-xl"
+                  src={work.image}
+                  alt="first project image"
+                ></Image>
+
+                <div className="text-white tracking-tighter font-semibold text-xl">
                   {work.title}
                 </div>
-                <div className=" text-white/70 tracking-tighter font-medium text-lg">
+                <div className=" text-white/50 tracking-tighter font-normal text-lg max-w-3xl">
                   {work.description}
+                </div>
+                <div className=" text-white/30 tracking-tighter font-medium text-lg max-w-3xl">
+                  {work.languages}
                 </div>
               </div>
             ))}
+          </div>
+          <div className="flex justify-center py-1 mx-auto">
+            {" "}
+            <a href="https://github.com/SaadAnna" target="_blank" className=" text-center bg-white/5 border border-white/20 w-40 mx-auto text-sm text-white p-3 rounded-full font-semibold">
+               View In Git Hub
+            </a>
           </div>
         </div>
       </div>
