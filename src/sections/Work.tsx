@@ -1,27 +1,30 @@
 import React from "react";
-
+import FirstProject from "@/assets/firstproject.png";
+import SeconProject from "@/assets/secondproject.png";
+import ThirdProject from "@/assets/thirdproject.png";
+import Image from "next/image";
 export const Work = () => {
   const Works = [
     {
       id: 1,
-      image: "ss",
+      image: FirstProject,
+      title: "Ai Seo Genarator Landing Page",
+      description: "saad anna is the best",
+      languages: "HTML / CSS / Javascript",
+    },
+    {
+      id: 2,
+      image: SeconProject,
       title: "saad",
       description: "saad anna is the best",
       languages: "HTML / CSS / Javascript",
     },
     {
       id: 2,
-      image: "ss",
-      title: "saad",
-      description: "saad anna is the best",
-      languages: "HTML / CSS / Javascript",
-    },
-    {
-      id: 2,
-      image: "",
+      image: ThirdProject,
       title: "saad",
       description: "",
-      languages: "",
+      languages: "HTML / CSS / Javascript",
     },
   ];
   return (
@@ -35,12 +38,12 @@ export const Work = () => {
             {Works.map((work) => (
               <div
                 key={work.id}
-                className="flex flex-col relative  text-start justify-start gap-3 p-2.5 border border-white/20 rounded-xl w-[300px] h-[300px] cursor-pointer"
+                className="flex flex-col relative  text-start justify-start gap-3 p-2.5 border border-white/20 rounded-xl w-[300px] h-[400px] cursor-pointer"
               >
-                <div className="w-auto h-20 rounded-xl object-cover">
-                  {work.image}
-                </div>
-                <div className="text-white tracking-tighter font-medium text-xl">
+                <a href="">
+                <Image className="w-auto h-48 object-cover border border-white/20 rounded-xl" src={work.image} alt="first project image"></Image>
+                </a>
+                <div className="text-white tracking-tighter font-semibold text-lg">
                   {work.title}
                 </div>
                 <div className=" text-white/70 tracking-tighter font-medium text-lg">
