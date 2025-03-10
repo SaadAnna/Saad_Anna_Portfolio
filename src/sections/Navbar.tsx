@@ -1,10 +1,19 @@
+"use client";
+import { useState } from 'react';
+
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header className="py-4 border-b border-white/15 md:border-none  sticky top-0 z-10 ">
+    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-10">
       <div className="absolute inset-0 rounded-3xl backdrop-blur -z-10 md:hidden"></div>
       <div className="container">
         <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl lg:max-w-2xl mx-auto relative">
-          <div className="absolute inset-0 rounded-xl  backdrop-blur -z-10 hidden md:block"></div>
+          <div className="absolute inset-0 rounded-xl backdrop-blur -z-10 hidden md:block"></div>
           <div>
             <div className="border h-10 w-10 rounded-lg inline-flex justify-center items-center border-white/15">
               <svg
@@ -20,7 +29,9 @@ export const Navbar = () => {
               </svg>
             </div>
           </div>
-          <div className="hidden md:block" id="navabar">
+          
+          {/* Desktop Menu */}
+          <div className="hidden md:block" id="navbar">
             <nav className="flex gap-8 text-sm">
               <a href="#" className="text-white/70 hover:text-white transition">
                 Home
@@ -33,27 +44,55 @@ export const Navbar = () => {
               </a>
             </nav>
           </div>
+          
           <div className="flex gap-4 items-center">
             <button className="text-black font-semibold text-sm bg-white rounded-xl px-4 py-3">
               Contact Me
             </button>
-            <svg
-              className="w-8 h-8 md:hidden text-white dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
+            <button 
+              onClick={toggleMenu}
+              className="md:hidden"
+              aria-label="Toggle menu"
             >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M18 6H6m12 4H6m12 4H6m12 4H6"
-              />
-            </svg>
+              <svg
+                className="w-8 h-8 text-white dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M18 6H6m12 4H6m12 4H6m12 4H6"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        {/* Mobile Menu with Animation */}
+        <div 
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out max-w-2xl mx-auto ${
+            isMenuOpen ? 'max-h-64 opacity-100 mt-4' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="bg-black/70 backdrop-blur-lg py-6 px-4 rounded-xl border border-white/15">
+            <nav className="flex flex-col gap-4">
+              <a href="#" className="text-white/70 hover:text-white transition py-2 px-4 hover:bg-white/10 rounded-lg">
+                Home
+              </a>
+              <a href="#" className="text-white/70 hover:text-white transition py-2 px-4 hover:bg-white/10 rounded-lg">
+                Work
+              </a>
+              <a href="#" className="text-white/70 hover:text-white transition py-2 px-4 hover:bg-white/10 rounded-lg">
+                About
+              </a>
+            </nav>
           </div>
         </div>
       </div>

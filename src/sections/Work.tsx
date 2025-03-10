@@ -1,30 +1,23 @@
 import React from "react";
-import FirstProject from "@/assets/firstproject.png";
-import SeconProject from "@/assets/secondproject.png";
-import ThirdProject from "@/assets/thirdproject.png";
-import Image from "next/image";
 export const Work = () => {
   const Works = [
     {
       id: 1,
-      image: FirstProject,
+      type: "2025 / Side Project",
       title: "Ai Seo Genarator Landing Page",
       description: "",
-      languages: "Next.Js / Tailwind CSS / React.Js / Framer Motion",
     },
     {
       id: 2,
-      image: SeconProject,
+      type: "2024 / Side Project",
       title: "E-commerce Landing Page",
       description: "",
-      languages: "React.Js / Tailwind CSS / Vite",
     },
     {
       id: 2,
-      image: ThirdProject,
+      type: "2023 / Side Project",
       title: "Codew | Front-End Development Startup",
       description: "",
-      languages: "React.JS / Javascript / Email.Js / Tailwind CSS",
     },
   ];
   return (
@@ -40,21 +33,17 @@ export const Work = () => {
                 key={work.id}
                 className="flex flex-col relative duration-200 ease-out hover:bg-neutral-950 text-start justify-start gap-2 p-2.5 border border-white/20 rounded-xl w-[300px] h-[300px] cursor-pointer"
               >
-                <Image
-                  className="w-auto h-auto object-cover rounded-xl"
-                  src={work.image}
-                  alt="first project image"
-                ></Image>
-
-                <div className="text-white tracking-tighter font-semibold text-xl">
+              
+              <div className="text-sm text-white/70 font-medium">
+                {work.type}
+              </div>
+                <div className="text-white tracking-tighter font-semibold text-2xl">
                   {work.title}
                 </div>
-                <div className=" text-white/50 tracking-tighter font-normal text-lg max-w-3xl">
+                <div className=" text-white/60 tracking-tighter font-normal text-lg max-w-3xl">
                   {work.description}
                 </div>
-                <div className=" text-white/30 tracking-tighter font-medium text-lg max-w-3xl">
-                  {work.languages}
-                </div>
+               
               </div>
             ))}
           </div>
