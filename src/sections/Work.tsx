@@ -5,19 +5,21 @@ export const Work = () => {
       id: 1,
       type: "2025 / Side Project",
       title: "Ai Seo Genarator Landing Page",
-      description: "",
+      GitHubLink: false,
+      description:
+        "The AI SEO Generator Landing Page showcases an AI tool for creating optimized SEO content. It highlights features, benefits, and includes a call-to-action for user engagement.",
     },
     {
       id: 2,
       type: "2024 / Side Project",
-      title: "E-commerce Landing Page",
-      description: "",
+      GitHubLink: false,
+      title: "Codew Startup Wesite",
+      description:
+        "A sleek, responsive landing page built with React.js, Vite, Tailwind CSS, and JavaScript. It highlights services, expertise, and includes a call-to-action to attract clients.",
     },
     {
       id: 2,
-      type: "2023 / Side Project",
-      title: "Codew | Front-End Development Startup",
-      description: "",
+      GitHubLink: true,
     },
   ];
   return (
@@ -33,25 +35,26 @@ export const Work = () => {
                 key={work.id}
                 className="flex flex-col relative duration-200 ease-out hover:bg-neutral-950 text-start justify-start gap-2 p-2.5 border border-white/20 rounded-xl w-[300px] h-[300px] cursor-pointer"
               >
-              
-              <div className="text-sm text-white/70 font-medium">
-                {work.type}
-              </div>
+                <div className="text-sm text-white/70 font-medium">
+                  {work.type}
+                </div>
                 <div className="text-white tracking-tighter font-semibold text-2xl">
                   {work.title}
                 </div>
-                <div className=" text-white/60 tracking-tighter font-normal text-lg max-w-3xl">
+                <div className=" text-white/70 tracking-tighter font-normal text-base max-w-3xl">
                   {work.description}
                 </div>
-               
+                {work.GitHubLink && (
+                  <a
+                    href="https://github.com/SaadAnna"
+                    target="_blank"
+                    className="flex justify-center m-auto text-sm text-white/30 hover:text-white duration-300 rounded-full font-medium"
+                  >
+                    View In GitHub
+                  </a>
+                )}
               </div>
             ))}
-          </div>
-          <div className="flex justify-center py-1 mx-auto">
-            {" "}
-            <a href="https://github.com/SaadAnna" target="_blank" className=" text-center bg-white/5 border border-white/20 w-40 mx-auto text-sm text-white p-3 rounded-full font-semibold">
-               View In Git Hub
-            </a>
           </div>
         </div>
       </div>
