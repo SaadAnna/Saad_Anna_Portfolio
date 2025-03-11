@@ -86,7 +86,7 @@ export const Services = () => {
               className="flex flex-col relative  text-start justify-start gap-3 p-2.5 border border-white/20 rounded-xl w-[300px] h-[300px] cursor-pointer"
             >
               <div className="">{service.icon}</div>
-              <div className="text-white tracking-tighter font-medium text-xl">
+              <div className="text-white tracking-tighter font-medium text-2xl">
                 {service.title}
               </div>
               <div className=" text-white/70 tracking-tighter font-medium text-lg">
