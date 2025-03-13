@@ -4,7 +4,7 @@ import { LogoMotion } from "@/sections/LogoMotion";
 import { Services } from "@/sections/Services";
 import { About } from "@/sections/About";
 import { Work } from "@/sections/Work";
-import { Contact } from "@/sections/Contact";
+import  Contact  from "@/sections/Contact";
 export default function Home() {
   return (
     <>
