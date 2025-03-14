@@ -126,7 +126,6 @@ export default function Contact() {
               <textarea
                 id="message"
                 name="message"
-                rows="5"
                 required
                 value={formData.message}
                 onChange={handleChange}
