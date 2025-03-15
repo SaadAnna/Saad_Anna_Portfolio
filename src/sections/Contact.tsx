@@ -1,8 +1,10 @@
 "use client";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+  const form = useRef(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,20 +12,38 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
-
-  const handleSubmit = async (e) => {
+  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage('');
+    // rest of your code...
+  
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Make sure form.current exists before proceeding
+      if (!form.current) {
+        throw new Error('Form reference is not available');
+      }
+      
+      // Replace these with your actual EmailJS service ID, template ID, and public key
+      const result = await emailjs.sendForm(
+        'service_1tvl1gw',
+        'template_orpgouq',
+        form.current,
+        'ihsMFKjornDQXuhwB'
+      );
+      
+      console.log('Email sent successfully:', result.text);
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
@@ -32,14 +52,15 @@ export default function Contact() {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    }, 1500);
-    
-    // In a real application, you would send the form data to your backend
-    // const response = await fetch('/api/contact', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(formData)
-    // });
+    } catch (err) {
+      console.error('Email send failed:', err);
+      setIsSubmitting(false);
+      setErrorMessage('Failed to send message. Please try again later.');
+      
+      setTimeout(() => {
+        setErrorMessage('');
+      }, 5000);
+    }
   };
 
   // Animation variants
@@ -64,8 +85,6 @@ export default function Contact() {
 
   return (
     <section className="py-20">
-     
-
       <div className="container">
         <motion.div
           initial="hidden"
@@ -77,15 +96,14 @@ export default function Contact() {
             variants={itemVariants}
             className="text-5xl md:text-[70px] md:leading-none font-semibold tracking-tight bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center"
           >
-            Let’s Collaborate
+            Let&apos;s Collaborate
           </motion.h1>
 
-        
-
           <motion.form 
+            ref={form}
             variants={containerVariants}
             onSubmit={handleSubmit}
-            className="space-y-6 mt-20 border border-white/20 rounded-xl p-5 "
+            className="space-y-6 mt-20 border border-white/20 rounded-xl p-5"
           >
             <motion.div variants={itemVariants}>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -131,6 +149,7 @@ export default function Contact() {
                 onChange={handleChange}
                 className="w-full px-4 py-3 mt-1 rounded-lg bg-transparent border border-white/20 focus:outline-none focus:border focus:border-white text-white"
                 placeholder="Your message..."
+                rows={4}
               />
             </motion.div>
 
@@ -148,17 +167,27 @@ export default function Contact() {
               </motion.button>
             </motion.div>
           </motion.form>
-          {isSubmitted ? (
+          
+          {isSubmitted && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="px-8 py-3 bg-green-800 text-green-100  mt-10 rounded-lg  text-center"
+              className="px-8 py-3 bg-green-800 text-green-100 mt-10 rounded-lg text-center"
             >
-              Thank you for your message! I'll get back to you soon.
+              Thank you for your message! I&apos;ll get back to you soon.
             </motion.div>
-          ) : null}
+          )}
+          
+          {errorMessage && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="px-8 py-3 bg-red-800 text-red-100 mt-10 rounded-lg text-center"
+            >
+              {errorMessage}
+            </motion.div>
+          )}
         </motion.div>
-
       </div>
     </section>
   );
