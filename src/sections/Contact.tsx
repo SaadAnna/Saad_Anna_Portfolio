@@ -174,7 +174,7 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               className="px-8 py-3 bg-green-800 text-green-100 mt-10 rounded-lg text-center"
             >
-              Thank you for your message! I&apos;ll get back to you soon.
+              Thank You For Your Message! I&apos;ll Get Back To You Soon.
             </motion.div>
           )}
           
