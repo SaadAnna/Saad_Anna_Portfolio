@@ -1,4 +1,4 @@
-// components/IntegrationHub.jsx
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -105,7 +105,7 @@ export const IntegrationHub = () => {
   };
 
   // Calculate position based on angle and radius
-  const calculatePosition = (angle: any, radius: any) => {
+  const calculatePosition = (angle: number, radius: number) => {
     const radian = (angle - 90) * (Math.PI / 180);
     const x = radius * Math.cos(radian);
     const y = radius * Math.sin(radian);
@@ -139,7 +139,9 @@ export const IntegrationHub = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-blue-50 to-white flex flex-col items-center justify-center py-16">
+    <section className='py-20'>
+    
+    <div className="mx-auto bg-gradient-to-b flex flex-col items-center justify-center py-16">
       <motion.div 
         className="w-full max-w-6xl mx-auto px-4 text-center relative"
         initial="hidden"
@@ -151,45 +153,7 @@ export const IntegrationHub = () => {
           className="mb-6"
           variants={itemVariants}
         >
-          <div className="inline-flex items-center">
-            <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-2">
-              <span className="text-white text-xl font-bold">+</span>
-            </div>
-            <span className="text-gray-700 font-medium">INTEGRATION</span>
-          </div>
-        </motion.div>
-        
-        {/* Main Heading */}
-        <motion.h1 
-          className="text-4xl md:text-5xl font-bold text-gray-800 max-w-3xl mx-auto mb-4"
-          variants={itemVariants}
-        >
-          Transforming Industry Leaders with Efficient Integration Methods
-        </motion.h1>
-        
-        {/* Subheading */}
-        <motion.p 
-          className="text-gray-600 max-w-xl mx-auto mb-12"
-          variants={itemVariants}
-        >
-          We empower top manufacturers to enhance productivity and streamline operations through efficient integrations. By connecting systems and automating workflows.
-        </motion.p>
-        
-        {/* CTA Button */}
-        <motion.div
-          variants={itemVariants}
-        >
-          <motion.button 
-            className="bg-blue-600 text-white px-6 py-3 rounded-full flex items-center mx-auto hover:bg-blue-700 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Learn More
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </motion.button>
-        </motion.div>
+       
         
         {/* Integration Hub Visual */}
         <div className="relative w-full h-96 my-12">
@@ -199,10 +163,10 @@ export const IntegrationHub = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <div className="w-96 h-96 rounded-full border-2 border-blue-100 opacity-30"></div>
+            <div className="w-[70px] h-[70px] rounded-full border-2 border-blue-100 opacity-30"></div>
             <div className="w-72 h-72 rounded-full border-2 border-blue-100 opacity-50 absolute"></div>
             <div className="w-48 h-48 rounded-full border-2 border-blue-100 opacity-70 absolute"></div>
-            <div className="w-24 h-24 rounded-full bg-blue-500 absolute flex items-center justify-center">
+            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-blue-700 to-blue-800 absolute flex items-center justify-center">
               <span className="text-white text-2xl">+</span>
             </div>
           </motion.div>
@@ -218,7 +182,34 @@ export const IntegrationHub = () => {
           </motion.div>
         </div>
       </motion.div>
+      <div className="inline-flex items-center">
+           
+          </div>
+        </motion.div>
+        
+        {/* Main Heading */}
+        <motion.h1 
+          className="text-5xl md:text-[50px] mt-5 md:leading-none font-semibold tracking-tight bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center max-w-3xl"
+          variants={itemVariants}
+        >
+          Transforming Industry Leaders with Efficient Integration Methods
+        </motion.h1>
+        
+        {/* Subheading */}
+        <motion.p 
+          className="text-white/40 text-center max-w-xl mx-auto mt-5"
+          variants={itemVariants}
+        >
+          We empower top manufacturers to enhance productivity and streamline operations through efficient integrations. By connecting systems and automating workflows.
+        </motion.p>
+        
+        {/* CTA Button */}
+        <motion.div
+          variants={itemVariants}
+        >
+        </motion.div>
     </div>
+    </section>
   );
 };
 

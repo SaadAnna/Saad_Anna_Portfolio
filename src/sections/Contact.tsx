@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
-export default function Contact() {
+export const Contact = () => {
   const form = useRef(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -192,3 +192,4 @@ export default function Contact() {
     </section>
   );
 }
+export default Contact;
