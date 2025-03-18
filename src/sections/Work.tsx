@@ -36,7 +36,7 @@ export const Work = () => {
     
                 className="flex flex-col relative duration-200 ease-out hover:bg-neutral-950 text-start justify-start gap-2 p-2.5 border border-white/20 rounded-xl w-[300px] h-[300px] cursor-pointer"
               >
-                 <a href={work.LivePreview}>
+                 <a href={work.LivePreview} target="_blank">
                 <div className="text-sm text-white/70 font-medium">
                   {work.type}
                 </div>

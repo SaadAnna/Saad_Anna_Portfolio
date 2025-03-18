@@ -6,6 +6,7 @@ const config: Config = {
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class', // Added dark mode configuration
   theme: {
     container: {
       center: true,
@@ -24,8 +25,19 @@ const config: Config = {
       md: "768px",
       lg: "1200px",
     },
-    extend: {},
+    extend: {
+      // You can add dark mode specific colors here if needed
+      colors: {
+        // Example dark mode colors (optional)
+        dark: {
+          background: "#121212",
+          surface: "#1E1E1E",
+          text: "#E0E0E0",
+        },
+      },
+    },
   },
   plugins: [],
 };
+
 export default config;
