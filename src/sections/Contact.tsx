@@ -112,7 +112,7 @@ export const Contact = () => {
               <input
                 type="text"
                 id="name"
-                name="Myname"
+                name="name"
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -128,7 +128,7 @@ export const Contact = () => {
               <input
                 type="email"
                 id="email"
-                name="Myemail"
+                name="email"
                 required
                 value={formData.email}
                 onChange={handleChange}
