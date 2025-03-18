@@ -10,7 +10,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="bg-black text-white">
+    <html lang="en" className="bg-black text-white scroll-smooth">
       <body className={inter.className}>
         <div className="relative">
           <GridSquares />
