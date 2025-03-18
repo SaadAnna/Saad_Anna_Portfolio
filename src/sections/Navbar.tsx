@@ -32,7 +32,7 @@ export const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:block" id="navbar">
-            <nav className="flex gap-8 text-sm">
+            <nav className="flex gap-8 text-sm ">
               <a href="#hero" className="text-white/70 hover:text-white transition">
                 Home
               </a>
@@ -43,7 +43,7 @@ export const Navbar = () => {
                 About
               </a>
               <a href="#services" className="text-white/70 hover:text-white transition">
-                Sefrvices
+                Services
               </a>
               <a href="#contact" className="text-white/70 hover:text-white transition">
                 Contact
@@ -98,28 +98,40 @@ export const Navbar = () => {
         {/* Mobile Menu with Animation */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out max-w-2xl mx-auto ${
-            isMenuOpen ? "max-h-64 opacity-100 mt-4" : "max-h-0 opacity-0"
+            isMenuOpen ? "max-h-64 opacity-100 mt-4 " : "max-h-0 opacity-0"
           }`}
         >
-          <div className="bg-black/70 backdrop-blur-lg py-6 px-4 rounded-xl border border-white/15">
-            <nav className="flex flex-col gap-4">
+          <div className="bg-black/70 backdrop-blur-lg  py-1 px-4 rounded-xl border border-white/15 h-fit">
+            <nav className="flex flex-col gap-2">
               <a
-                href="#"
+                href="#hero"
                 className="text-white/70 hover:text-white transition py-2 px-4 hover:bg-white/10 rounded-lg"
               >
                 Home
               </a>
               <a
-                href="#"
+                href="#work"
                 className="text-white/70 hover:text-white transition py-2 px-4 hover:bg-white/10 rounded-lg"
               >
                 Work
               </a>
               <a
-                href="#"
+                href="#about"
                 className="text-white/70 hover:text-white transition py-2 px-4 hover:bg-white/10 rounded-lg"
               >
                 About
+              </a>
+              <a
+                href="#services"
+                className="text-white/70 hover:text-white transition py-2 px-4 hover:bg-white/10 rounded-lg"
+              >
+                Services
+              </a>
+              <a
+                href="#contact"
+                className="text-white/70 hover:text-white transition py-2 px-4 hover:bg-white/10 rounded-lg"
+              >
+                Contact
               </a>
             </nav>
           </div>
