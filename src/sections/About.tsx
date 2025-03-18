@@ -62,7 +62,7 @@ export const About = () => {
   }, []);
 
   return (
-    <section className="py-20">
+    <section className="py-20" id="about">
       <div className="container">
         <div className="flex flex-col gap-10 mx-auto">
           <div className="text-4xl md:text-[45px] mx-auto md:leading-none max-w-2xl font-semibold tracking-tight bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center">

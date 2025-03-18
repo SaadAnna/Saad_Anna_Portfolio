@@ -84,7 +84,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-20" id="contact">
       <div className="container">
         <motion.div
           initial="hidden"

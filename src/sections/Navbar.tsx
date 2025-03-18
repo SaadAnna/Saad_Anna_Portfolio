@@ -33,14 +33,17 @@ export const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:block" id="navbar">
             <nav className="flex gap-8 text-sm">
-              <a href="#" className="text-white/70 hover:text-white transition">
+              <a href="#hero" className="text-white/70 hover:text-white transition">
                 Home
               </a>
-              <a href="#" className="text-white/70 hover:text-white transition">
+              <a href="#work" className="text-white/70 hover:text-white transition">
                 Work
               </a>
-              <a href="#" className="text-white/70 hover:text-white transition">
+              <a href="#about" className="text-white/70 hover:text-white transition">
                 About
+              </a>
+              <a href="#contact" className="text-white/70 hover:text-white transition">
+                Contact
               </a>
             </nav>
           </div>

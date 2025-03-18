@@ -3,7 +3,7 @@ import ProfileImage from "@/assets/profile.png";
 import Image from "next/image";
 export const Hero = () => {
   return (
-    <section className="py-20">
+    <section className="py-20" id="hero">
       <div className="container">
         <div className="flex flex-col text-center justify-center gap-4">
         <Image src={ProfileImage} loading="lazy" alt="Profile Image" className="w-24 h-24 rounded-full mx-auto object-cover"/>

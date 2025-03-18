@@ -22,7 +22,7 @@ export const Work = () => {
    
   ];
   return (
-    <section className="py-20">
+    <section className="py-20" id="work">
       <div className="container">
         <div className="flex flex-col gap-10 justify-center mx-auto ">
           <div className="text-5xl md:text-[70px] md:leading-none font-semibold tracking-tight bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center">
