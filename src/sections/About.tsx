@@ -73,27 +73,27 @@ export const About = () => {
             ref={textRef}
             className="lg:text-3xl md:text-2xl sm:text-xl max-w-5xl font-normal mx-auto text-center"
           >
-            <span className="always-white">Hello, I&apos;m Saad</span>{" "}
-            <span className="animate-span sm:text-lg">
+            <span className="always-white md:text-5xl sm:text-xl">HELLO, I&apos;M SAAD</span>{" "}
+            <span className="animate-span md:text-4xl sm:text-xl">
               a passionate front-end developer with 2 years of experience
               turning ideas into interactive, pixel-perfect realities.
             </span>{" "}
-            <span className="animate-span sm:text-lg">
+            <span className="animate-span md:text-4xl sm:text-xl">
               I specialize in crafting sleek, responsive websites using HTML,
               CSS, JavaScript, and modern frameworks like React.js and Next.js.
             </span>{" "}
-            <span className="animate-span sm:text-lg">
+            <span className="animate-span md:text-4xl sm:text-xl">
               With a love for clean code and a keen eye for design, I bring
               creativity and functionality together using tools like Tailwind
               CSS to build seamless user experiences.
             </span>{" "}
-            <span className="animate-span sm:text-lg">
+            <span className="animate-span md:text-4xl sm:text-xl">
               Whether it&apos;s a dynamic web app or a stunning UI, I&apos;m all
               about creating digital solutions that not only look great but work
               flawlessly.
             </span>{" "}
-            <span className="always-white">
-              Let&apos;s build something amazing together!
+            <span className="always-white md:text-5xl sm:text-xl">
+              LET&apos;S BUILD SOMETHING AMAZING TOGETHER!
             </span>
           </div>
         </div>
