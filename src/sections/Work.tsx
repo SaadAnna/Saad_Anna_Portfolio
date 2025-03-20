@@ -5,7 +5,6 @@ export const Work = () => {
       id: 1,
       type: "2025 / Side Project",
       title: "Ai Seo Genarator Landing Page",
-      GitHubLink: false,
       description:
         "The AI SEO Generator Landing Page showcases an AI tool for creating optimized SEO content. It highlights features, benefits, and includes a call-to-action for user engagement.",
       LivePreview: "https://dester.vercel.app/",
@@ -13,11 +12,18 @@ export const Work = () => {
     {
       id: 2,
       type: "2024 / Side Project",
-      GitHubLink: false,
       title: "Codew Startup Wesite",
       description:
         "A sleek, responsive landing page built with React.js, Vite, Tailwind CSS, and JavaScript. It highlights services, expertise, and includes a call-to-action to attract clients.",
       LivePreview: "https://codewx.netlify.app/",
+      },
+    {
+      id: 3,
+      type: "2024 / Side Project",
+      title: "Temse",
+      description:
+        "A sleek, responsive landing page built with React.js, Vite, Tailwind CSS, and JavaScript. It highlights services, expertise, and includes a call-to-action to attract clients.",
+      LivePreview: "https://Temse.netlify.app/",
       },
    
   ];
@@ -45,18 +51,8 @@ export const Work = () => {
                 </div>
                 <div className=" text-white/70 tracking-tighter font-normal text-base max-w-3xl">
                   {work.description}
-                </div>
-               
-                {work.GitHubLink && (
-                  <a
-                    href="https://github.com/SaadAnna"
-                    target="_blank"
-                    className="flex justify-center m-auto text-sm text-white/30 hover:text-white duration-300 rounded-full font-medium"
-                  >
-                    View In GitHub
-                  </a>
-                  
-                )}</a>
+                </div>       
+                </a>
               </div>
             ))}
           </div>
