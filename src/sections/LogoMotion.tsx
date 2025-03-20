@@ -46,7 +46,7 @@ export const LogoMotion = () => {
                 vscodelogo,
               ].map((logo) => (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={logo.src} key={logo.src} className="h-20 md:h-14 sm:h-6 w-auto" />
+                <img src={logo.src} key={logo.src} className="h-32 md:h-24 sm:h-6 w-auto" />
               ))}
             </motion.div>
           </div>
