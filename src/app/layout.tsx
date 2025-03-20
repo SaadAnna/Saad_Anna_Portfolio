@@ -24,14 +24,14 @@ export const metadata: Metadata = {
         alt: "Saad Anna Portfolio Image",
       },
     ],
-    url: "https://dester.vercel.app/", // Replace with your website URL
+    url: "https://saadev.vercel.app/", // Replace with your website URL
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Saad Anna Portfolio",
     description: "Front-End Developer",
-    images: ["@/assets/logo.svg"], // Replace with your Twitter image
+    images: ["@/assets/logo.svg"], 
   },
 };
 
