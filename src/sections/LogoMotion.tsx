@@ -14,7 +14,11 @@ export const LogoMotion = () => {
   return (
     <section className="py-20">
       <div className="container">
-          <div className="flex mx-auto flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+      <div className="flex items-center gap-5">
+          <div className="flex-1 md:flex-none lg:text-2xl text-lg">
+            <h2>My Skills</h2>
+          </div>
+          <div className="flex flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
             <motion.div
               initial={{ translateX: "-50%" }}
               animate={{ translateX: "0" }}
@@ -29,8 +33,8 @@ export const LogoMotion = () => {
                 csslogo,
                 npmlogo,
                 htmllogo,
-                jslogo,
                 framerlogo,
+                jslogo,
                 reactlogo,
                 pythonlogo,
                 tailwindlogo,
@@ -38,18 +42,20 @@ export const LogoMotion = () => {
                 csslogo,
                 npmlogo,
                 htmllogo,
-                jslogo,
                 framerlogo,
+                jslogo,
                 reactlogo,
                 pythonlogo,
                 tailwindlogo,
                 vscodelogo,
+                
               ].map((logo) => (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={logo.src} key={logo.src} className="h-32 md:h-24 sm:h-6 w-auto" />
+                <img src={logo.src} key={logo.src} className="lg:h-10 h-8 w-auto" />
               ))}
             </motion.div>
           </div>
+        </div>
         
       </div>
     </section>
