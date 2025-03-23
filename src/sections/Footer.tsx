@@ -11,7 +11,6 @@ export const Footer = () => {
           </div>
 
         
-      
 
           <div className="flex  text-white/55 text-base ">
           We love what we do every day.
