@@ -79,11 +79,11 @@ export const Services = () => {
         <div className="text-4xl md:text-[45px] mx-auto md:leading-none max-w-2xl font-semibold tracking-tight bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center">
           Collaborate with brands and agencies to create impactful results
         </div>
-        <div className="flex p-2.5 py-16  rounded-xl gap-14 items-center lg:flex-1 flex-wrap justify-center">
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div
               key={service.id}
-              className="flex flex-col relative  text-start justify-start gap-3 p-2.5 border border-white/20 rounded-xl w-[300px] h-[300px] cursor-pointer"
+              className="flex flex-col relative  text-start justify-start gap-3.5 p-3.5 border border-white/20 rounded-xl cursor-pointer"
             >
               <div className="">{service.icon}</div>
               <div className="text-white tracking-tighter font-medium text-2xl">
