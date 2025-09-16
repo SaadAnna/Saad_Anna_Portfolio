@@ -25,6 +25,14 @@ export const Work = () => {
         "A sleek, responsive landing page built with React.js, Vite, Tailwind CSS, and JavaScript. It highlights services, expertise, and includes a call-to-action to attract clients.",
       LivePreview: "https://Temse.netlify.app/",
       },
+    {
+      id: 4,
+      type: "2025 / Side Project",
+      title: "Newt",
+      description:
+        "A modern, responsive Home page for a digital bank services built with React.js, Vite,expertise, and includes a call-to-action to attract clients, with a modern Ui/UX",
+      LivePreview: "https://newtx.vercel.app/",
+      },
    
   ];
   return (
@@ -34,7 +42,7 @@ export const Work = () => {
           <div className="text-5xl md:text-[70px] md:leading-none font-semibold tracking-tight bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center">
             My Success Stories
           </div>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {Works.map((work) => (
               
               <div
