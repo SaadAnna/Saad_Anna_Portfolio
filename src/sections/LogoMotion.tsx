@@ -15,7 +15,7 @@ export const LogoMotion = () => {
     <section className="py-20">
       <div className="container">
       <div className="flex items-center gap-5">
-          <div className="flex-1 md:flex-none lg:text-2xl text-lg">
+          <div className="flex-1 md:flex-none lg:text-2xl text-lg p-3 border-white/15 border rounded-full">
             <h2>My Skills</h2>
           </div>
           <div className="flex flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
