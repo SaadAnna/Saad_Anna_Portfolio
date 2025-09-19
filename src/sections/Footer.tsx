@@ -13,7 +13,7 @@ export const Footer = () => {
         
 
           <div className="flex  text-white/55 text-base ">
-          We love what we do every day.
+          We love what we do every day
           </div>
           <div className="flex lg:flex-1 gap-5 items-center lg:justify-end">
           <a className="" href="https://github.com/SaadAnna" target="_blank">
